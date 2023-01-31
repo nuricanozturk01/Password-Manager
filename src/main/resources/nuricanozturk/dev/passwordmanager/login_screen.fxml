@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="500.0" maxWidth="450.0" minHeight="500.0" minWidth="450.0" prefHeight="500.0" prefWidth="450.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nuricanozturk.dev.passwordmanager.Controller.LoginScreenController">
+   <children>
+      <Label layoutX="167.0" layoutY="39.0" prefHeight="39.0" prefWidth="99.0" style="-fx-text-fill: #0F9D58;" text="PasswordX" textFill="#109754">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="152.0" prefHeight="39.0" prefWidth="79.0" text="Username:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="142.0" layoutY="154.0" prefHeight="39.0" prefWidth="192.0" />
+      <Button layoutX="189.0" layoutY="273.0" mnemonicParsing="false" onAction="#clickLogin" prefHeight="35.0" prefWidth="79.0" text="Login" />
+      <Label layoutX="45.0" layoutY="209.0" prefHeight="39.0" prefWidth="79.0" text="Password:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="338.0" layoutY="449.0" mnemonicParsing="false" onAction="#clickSignUp" text="Sign Up!" />
+      <Button layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#clickForgotPassword" prefHeight="30.0" prefWidth="175.0" text="Forgot Password" />
+      <PasswordField fx:id="passwordTextField" layoutX="142.0" layoutY="211.0" prefWidth="192.0" />
+   </children>
+</AnchorPane>

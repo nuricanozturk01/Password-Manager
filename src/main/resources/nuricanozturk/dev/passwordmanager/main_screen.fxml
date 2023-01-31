@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nuricanozturk.dev.passwordmanager.Controller.MainScreenController">
+   <stylesheets>
+      <URL value="@dark.css" />
+      <URL value="@table.css" />
+   </stylesheets>
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="807.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clickLogMenuItem" text="Log" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickExitMenuItem" text="Exit" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickExport" text="Export" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <CheckMenuItem fx:id="showPasswordCheckMenuItem" mnemonicParsing="false" onAction="#clickShowPasswordCheckMenuItem" text="Show Passwords" />
+                  <CheckMenuItem fx:id="hidePasswordCheckMenuItem" mnemonicParsing="false" onAction="#clickHidePasswordCheckMenuItem" selected="true" text="Hide Passwords" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="searchTextField" layoutX="74.0" layoutY="44.0" onKeyPressed="#pressSearchTextField" prefHeight="39.0" prefWidth="461.0" promptText="Search" />
+      <TableView fx:id="tableView" layoutY="86.0" prefHeight="567.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="appNameColumn" editable="false" prefWidth="193.0" style="-fx-alignment: CENTER" text="Application" />
+          <TableColumn fx:id="usernameColumn" editable="false" prefWidth="184.0" style="-fx-alignment: CENTER" text="Username" />
+            <TableColumn fx:id="passwordColumn" editable="false" prefWidth="230.0" style="-fx-alignment: CENTER" text="Password" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#clickAddMenuItem" text="Add" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickDeleteMenuItem" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickUpdateMenuItem" text="Update" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickShowSpecPassword" text="Show" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label layoutX="700.0" layoutY="39.0" prefHeight="44.0" prefWidth="204.0" text="Password Generator">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="passwordTextField" layoutX="631.0" layoutY="103.0" prefHeight="39.0" prefWidth="329.0" />
+      <Button layoutX="743.0" layoutY="341.0" mnemonicParsing="false" onAction="#clickGenerateButton" prefHeight="35.0" prefWidth="115.0" text="Generate" />
+      <Button layoutX="852.0" layoutY="291.0" mnemonicParsing="false" onAction="#clickClearBtn" prefHeight="17.0" prefWidth="64.0" text="Clear" />
+      <RadioButton fx:id="specialRadioButton" layoutX="782.0" layoutY="238.0" mnemonicParsing="false" text="[#-?]" />
+      <RadioButton fx:id="zero_nineRadioButton" layoutX="633.0" layoutY="229.0" mnemonicParsing="false" text="[0-9]" />
+      <RadioButton fx:id="A_ZRadioButton" layoutX="782.0" layoutY="171.0" mnemonicParsing="false" text="[A-Z]" />
+      <RadioButton fx:id="a_zRadioButton" layoutX="633.0" layoutY="171.0" mnemonicParsing="false" text="[a-z]" />
+      <RadioButton fx:id="autoRadioButton" layoutX="633.0" layoutY="289.0" mnemonicParsing="false" text="Auto" />
+      <TextField fx:id="a_zTextField" layoutX="690.0" layoutY="162.0" prefWidth="64.0" />
+      <TextField fx:id="zero_nineTextField" layoutX="690.0" layoutY="220.0" prefWidth="64.0" />
+      <TextField fx:id="autoTextField" layoutX="690.0" layoutY="280.0" prefWidth="64.0" />
+      <TextField fx:id="A_ZTextField" layoutX="852.0" layoutY="162.0" prefWidth="64.0" />
+      <TextField fx:id="specialTextField" layoutX="852.0" layoutY="229.0" prefWidth="64.0" />
+   </children>
+</AnchorPane>
