@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="649.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nuricanozturk.dev.passwordmanager.decrypt.passwordmanagerdecrypt.controller.DecryptionController">
+   <children>
+      <Button layoutX="473.0" layoutY="101.0" mnemonicParsing="false" onAction="#clickFileChooser" text="Choose File" />
+      <TextField fx:id="keyTextField" layoutX="58.0" layoutY="98.0" prefWidth="208.0" promptText="Enter the key" />
+      <TableView fx:id="tableView" layoutY="204.0" prefHeight="439.0" prefWidth="648.0" stylesheets="@table.css">
+        <columns>
+          <TableColumn fx:id="appNameTableColumn" minWidth="200.0" prefWidth="75.0" text="App Name" />
+          <TableColumn fx:id="appUserNameTableColumn" minWidth="230.0" prefWidth="75.0" text="Username" />
+            <TableColumn fx:id="appPasswordTableColumn" minWidth="211.0" prefWidth="211.0" text="Password" />
+        </columns>
+      </TableView>
+      <Button layoutX="292.0" layoutY="149.0" mnemonicParsing="false" onAction="#clickDecryption" text="Decrypt" />
+      <Label layoutX="132.0" layoutY="14.0" prefHeight="44.0" prefWidth="385.0" text="PASSWORD MANAGER FILE DECRYPTOR">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
