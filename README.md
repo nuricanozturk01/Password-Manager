@@ -16,7 +16,7 @@
  - MySQL
 
 ## Next version will be include
- - <del> Save Passwords to file (encrypted (sharing key with user)) </del> 
+ - <del> Save Passwords to file (encrypted (sharing key with user)) </del> (31.01.2023)
  - Save Logs and sending email once a month
  - Some fronted updated
  - Reset Logs once a month
